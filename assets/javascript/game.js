@@ -27,9 +27,12 @@ for (var i = 0; i <randomWord.length; i++) {
 
 // User input by pressing on anything on the keyboard
 document.onkeyup = function(keypressed) {
-    var userInput = keypressed.key;
-
-    if (userInput === "a")
-    letterGuessed.append(userInput + " ");
+    var userInput = keypressed.key.toLowerCase();
+// limiting the letters shown to only the alphabet
+    if (letters.includes(userInput)) {
+        letterGuessed.append(userInput + " ");
+    }
+    
+    
 }
 
