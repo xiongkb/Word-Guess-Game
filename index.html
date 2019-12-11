@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <script src="./assets/javascript/game.js"></script>
+    
 </head>
 <body>
-    <div>
+    <div class="container-fluid">
         <h1>Welcome to Coco and Vanilla's Word Guess Game!</h1>
-        <p>Guess the word:</p>
+        
         <!-- random word generator should be here-->
-        <p>Chances left:</p>
-        <p>Letters you guessed:</p>
+        <div>Guess the word:<span id="guess-Word"></span></div>
+        <div>Chances left:<span id="chances-Left"></span></div>
+        <div>Letters you guessed:<span id="letter-Guessed"></span></div>
     </div>
 </body>
+<script src="./assets/javascript/game.js"></script>
 </html>
