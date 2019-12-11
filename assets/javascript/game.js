@@ -2,7 +2,7 @@
 var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var words = ["chicken dinner", "gravy with food", "tuna", "salmon", "kibbles", "fish", "beef", "turkey", "pumpkin", "mouse wands", 
     "feather toys", "bells and balls", "a tabby", "a torbie", "a tortoiseshell", "a calico", "cat tree", "tunnel for cat", "treats"];
-
+var guessed = [""]
 // variables for wins and loses, starting out at 0
 var winCount = 0;
 var loseCount = 0;
@@ -30,8 +30,21 @@ document.onkeyup = function(keypressed) {
     var userInput = keypressed.key.toLowerCase();
 // limiting the letters shown to only the alphabet
     if (letters.includes(userInput)) {
-        letterGuessed.append(userInput + " ");
+        // this nested if else will check if you already use the letter
+        if (!guessed.includes(userInput)) {
+            guessed.push(userInput);
+            letterGuessed.append(userInput + " ");
+        }
+        else {
+            alert("You already guessed this letter!");
+        }
     }
+    else {
+        alert("That is not a letter!")
+    }
+
+
+// if statement so that if letter matches the chosen word, it will show on the line
     
     
 }
