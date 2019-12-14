@@ -1,6 +1,7 @@
 var wins = 0;
 var loses = 0;
 var chances = 7;
+var stopped = true;
 // variables to/for grab the id from html
 var chosenWord = document.getElementById("chosen-Word");
 var chancesLeft = document.getElementById("chances-Left");
@@ -10,8 +11,18 @@ var lose = document.getElementById("lose");
 
 // THE START OF THE GAME HERE
 function start() {
-    chosenWord.innerHTML = "";
+    stopped = false;
     var start = document.getElementById("start");
+    document.getElementById("begin").innerHTML = "";
+    document.getElementById("gen-word").innerHTML = "Chosen Word: ";
+    document.getElementById("gen-letters").innerHTML = "Letters you picked: ";
+    document.getElementById("gen-chances").innerHTML = "Chances left: ";
+    document.getElementById("gen-wins").innerHTML = "Won: ";
+    document.getElementById("gen-loses").innerHTML = "Lost: ";
+    beginGame();
+}
+function beginGame() {
+    chosenWord.innerHTML = "";
     var context = this;
     // the arrays for the letters of the alphabet and words that will be picked randomly
     var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -43,6 +54,9 @@ function start() {
     console.log(randomWord)
     // User input by pressing on anything on the keyboard
     document.onkeyup = function(keypressed) {
+        if (stopped) {
+            return;fg6
+        }
         var userInput = keypressed.key.toLowerCase();
         // limiting the letters shown to only the alphabet
         if (alphabet.includes(userInput)) {
@@ -51,15 +65,15 @@ function start() {
             if (!unique.includes(userInput) && !guessed.includes(userInput)) { // loses code
                 chances -= 1;
                 chancesLeft.innerHTML = chances;
+            }
 
-                if (chances === 0) {
-                    loses += 1;
-                    lose.innerHTML = loses;
-                    chancesLeft.innerHTML = chances;
-                    letterGuessed.innerHTML = [];
-                    chances = 7;
-                    setTimeout(() => {context.start();}, 100)
-                }
+            if (chances === 0) {
+                loses += 1;
+                lose.innerHTML = loses;
+                chancesLeft.innerHTML = chances;
+                letterGuessed.innerHTML = [];
+                chances = 7;
+                setTimeout(() => {context.beginGame()}, 100)
             }
             // this nested if else will check if you already use the letter
             else if (!guessed.includes(userInput)) {
@@ -94,9 +108,8 @@ function start() {
                         letterGuessed.innerHTML = [];
                         chances.innerHTML = chances;
                         chances = 7;
-                        setTimeout(() => {context.start();}, 100)
+                        setTimeout(() => {context.beginGame()}, 100)
                     }
-                    
                 }
             } else {
                 alert("You already guessed this letter!");
@@ -108,9 +121,9 @@ function start() {
 }
 
 function stop(){
+    stopped = true;
     var stop = document.getElementById("stop");
-    alert("Thanks for playing");
-    alert("wins:" + wins + " loses:" + loses)
-    document.getElementById("bulk").innerHTML = "<h1>Thanks for playing</h1>";
+    document.getElementById("bulk").innerHTML = "<h2>Thanks for playing</h2><br>"+"Won: "+wins+"<br>"+
+        "Lost: "+loses;
     
 }
