@@ -28,11 +28,6 @@
     background-image: url("../images-sound/bkg-home.jpg");
     background-size: 100%;
 }
-.kitty {
-    background: #000;
-    width: 20px;
-    height: 20px;
-}
 .box {
     background: #a5682a;
     border: 5px #a52a68 ridge;
