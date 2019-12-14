@@ -1,0 +1,19 @@
+
+/* fonts to use: 
+    font-family: 'Quantico', sans-serif;
+    font-family: 'Special Elite', cursive; */
+.title {
+    border: 10px #a52a2a dotted;
+    font-family: 'Special Elite', cursive;
+}
+.game-body {
+    border: 5px #a5682a ridge;
+    width: 960px;
+    height: 460px;
+    font-family: 'Quantico', sans-serif;
+}
+.kitty {
+    background: #000;
+    width: 20px;
+    height: 20px;
+}

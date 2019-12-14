@@ -4,43 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coco and Vanilla's Hangman</title>
+    <title>Coco and Vanilla's Words</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quantico|Special+Elite&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <div class="container-fluid">
-        <h1>Guess the Coco and Vanilla's Word!</h1>
-        <button type="button" class="btn btn-outline-success" id="start" onclick="start()">START</button>
-        <button type="button" class="btn btn-outline-success" id="stop" onclick="stop()">STOP</button>
+    <div class="container">
+        <div class="row navbar justify-content-center">
+            <img class="float-left" alt="cardboard house" src="./assets/images-sound/cathose.jpg">
+            <div col-12>
+                <h1 class="title">Coco and Vanilla's Cat House of Words!</h1>
+            </div>
+            <img class="float-left" alt="cardboard house" src="./assets/images-sound/cathose.jpg">
+        </div>
+        <div class="row navbar justify-content-center mb-5">   
+            <div class="mr-3">
+                <button type="button" class="btn btn-success" id="start" onclick="start()">START</button>
+            </div>
+            <div class="ml-3">   
+                <button type="button" class="btn btn-warning" id="stop" onclick="stop()">STOP</button>
+            </div>
+        </div>
+        
         <!-- main content -->
     </div>
-    <div id="bulk">
-        <div id="begin">
-            <h2>Press START button to begin</h2>
-        </div>
-        <div>
-            <div id="gen-word"></div>
-            <div id="chosen-Word"></div>
-        </div>
-        <div>
-            <div id="gen-letters"></div>
-            <div id="letter-Guessed"></div>
-        </div>
-        <div>
-            <div id="gen-chances"></div>
-            <div id="chances-Left"></div>
-        </div>
-        <div>
-            <div id="gen-wins"></div>
-            <div id="win"></div>
-        </div>
-        <div>
-            <div id="gen-loses"></div>
-            <div id="lose"></div>
-        </div>
+    <div id="bulk" class="container game-body">
+            <div id="begin" class="row justify-content-center">
+                <h3>Press START button to begin</h3>
+            </div>
+            <div class="row top-left justify-content-center">
+                <div id="gen-word"></div>
+                <div id="chosen-Word"></div>
+            </div>
+            <div class="row under-word justify-content-center">
+                <div id="gen-letters"></div>
+                <div id="letter-Guessed"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="top-center">
+                    <div id="gen-chances"></div>
+                    <div id="chances-Left"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="animate">
+                    <div class="kitty"></div>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class=" col-1 bottom-left">
+                    <div id="gen-wins"></div>
+                    <div id="win"></div>
+                </div>
+                <div class=" col-1 bottom-right">
+                    <div id="gen-loses"></div>
+                    <div id="lose"></div>
+                </div>
+            </div>
     </div>
 </body>
 <script src="./assets/javascript/game.js"></script>

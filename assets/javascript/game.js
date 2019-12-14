@@ -123,7 +123,7 @@ function beginGame() {
 function stop(){
     stopped = true;
     var stop = document.getElementById("stop");
-    document.getElementById("bulk").innerHTML = "<h2>Thanks for playing</h2><br>"+"Won: "+wins+"<br>"+
+    document.getElementById("bulk").innerHTML = "<h3>Thanks for playing</h3><br>"+"Won: "+wins+"<br>"+
         "Lost: "+loses;
     
 }
