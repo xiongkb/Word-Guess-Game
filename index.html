@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quantico|Special+Elite&display=swap" rel="stylesheet">
     
 </head>
-<body>
+<body> 
     <div class="container">
         <div class="row navbar justify-content-center">
             <img class="float-left" alt="cardboard house" src="./assets/images-sound/cathose.jpg">
@@ -28,32 +28,34 @@
                 <button type="button" class="btn btn-warning" id="stop" onclick="stop()">STOP</button>
             </div>
         </div>
-        
-        <!-- main content -->
     </div>
+    
+        <!-- main content -->
+    
     <div id="bulk" class="container game-body">
-            <div id="begin" class="row justify-content-center">
-                <h3>Press START button to begin</h3>
+        <div class="">
+        <!-- the info for user to press the start button -->
+            <div id="begin" class="row justify-content-center ">
+                <h3 class="box">Press START button to begin</h3>
             </div>
+            <!-- the word should appear here in _ _ _  -->
             <div class="row top-left justify-content-center">
                 <div id="gen-word"></div>
                 <div id="chosen-Word"></div>
             </div>
+            <!-- letters guessed appears here -->
             <div class="row under-word justify-content-center">
                 <div id="gen-letters"></div>
                 <div id="letter-Guessed"></div>
             </div>
+            <!-- amount of chances left displayed here -->
             <div class="row justify-content-center">
                 <div class="top-center">
                     <div id="gen-chances"></div>
                     <div id="chances-Left"></div>
                 </div>
             </div>
-            <div class="row">
-                <div id="animate">
-                    <div class="kitty"></div>
-                </div>
-            </div>
+            <!-- score keeper is shown here on the bottom -->
             <div class="row justify-content-between">
                 <div class=" col-1 bottom-left">
                     <div id="gen-wins"></div>
@@ -64,6 +66,7 @@
                     <div id="lose"></div>
                 </div>
             </div>
+        </div>    
     </div>
 </body>
 <script src="./assets/javascript/game.js"></script>

@@ -11,6 +11,8 @@ var lose = document.getElementById("lose");
 
 // THE START OF THE GAME HERE
 function start() {
+    var music = new Audio("assets/images-sound/melodyloops-preview-be-happy-1m50s.mp3")
+    music.play();
     stopped = false;
     var start = document.getElementById("start");
     document.getElementById("begin").innerHTML = "";
@@ -108,7 +110,7 @@ function beginGame() {
                         letterGuessed.innerHTML = [];
                         chances.innerHTML = chances;
                         chances = 7;
-                        setTimeout(() => {context.beginGame()}, 100)
+                        setTimeout(() => {context.beginGame()}, 1500)
                     }
                 }
             } else {
@@ -123,7 +125,7 @@ function beginGame() {
 function stop(){
     stopped = true;
     var stop = document.getElementById("stop");
-    document.getElementById("bulk").innerHTML = "<h3>Thanks for playing</h3><br>"+"Won: "+wins+"<br>"+
+    document.getElementById("bulk").innerHTML = "<h3 class='box'>Thanks for playing</h3><br>"+"Won: "+wins+"<br>"+
         "Lost: "+loses;
     
 }
