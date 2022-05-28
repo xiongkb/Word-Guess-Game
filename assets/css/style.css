@@ -1,36 +1,35 @@
-
 /* fonts to use: 
     font-family: 'Quantico', sans-serif;
     font-family: 'Special Elite', cursive; */
 .title {
-    border: 10px #a52a2a dotted;
-    font-family: 'Special Elite', cursive;
+  border: 10px #a52a2a dotted;
+  font-family: "Special Elite", cursive;
 }
 .game-body {
-    border: 5px #a52a2a ridge;
-    width: 960px;
-    height: 460px;
-    font-family: 'Quantico', sans-serif;
+  border: 5px #a52a2a ridge;
+  width: 960px;
+  height: 460px;
+  font-family: "Quantico", sans-serif;
 }
 .container {
-    padding: 0px;
+  padding: 0px;
 }
 .animate-box {
-    width: 100%;
-    height: 300px;
+  width: 100%;
+  height: 300px;
 }
 .row {
-    margin-left: 0;
+  margin-left: 0;
 }
 .bg-image {
-    width: 100%;
-    height: 300px;
-    background-image: url("../images-sound/bkg-home.jpg");
-    background-size: 100%;
+  width: 100%;
+  height: 300px;
+  background-image: url("../images-sound/bkg-home.jpg");
+  background-size: 100%;
 }
 .box {
-    background: #a5682a;
-    border: 5px #a52a68 ridge;
-    color: #fff;
-    padding: 10px;
+  background: #a5682a;
+  border: 5px #a52a68 ridge;
+  color: #fff;
+  padding: 10px;
 }
